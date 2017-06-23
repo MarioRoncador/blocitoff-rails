@@ -1,0 +1,9 @@
+<h3> Add New Task </h3>
+  <%= form_for [@user, @item] do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control', placeholder: "Enter your new task", autofocus: true, :required => 'required' %>
+  <div class="form-group">
+    <%= f.submit "Save", class: 'btn btn-success' %>
+  </div>
+
+<% end %>

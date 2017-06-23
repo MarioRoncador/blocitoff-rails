@@ -4,3 +4,15 @@
   <h2>this is your personal page!</h2>
   <h5>You joined Blocitoff on <%= @user.created_at %></h5>
 </div>
+
+<% if current_user == @user %>
+<div class="col-md-8">
+  <%= render partial: 'items/form'%>
+</div>
+<% end %>
+
+<div class="row">
+  <div class="span6">
+    <%= render partial: 'items/item' %>
+  </div>
+</div>

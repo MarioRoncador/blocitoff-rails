@@ -1,0 +1,9 @@
+<h3> To-Do Tasks: </h3>
+<% @items.each do |item| %>
+    <div class="media-body">
+      <h4 class="media-heading">
+        <%= item.id %> - <%= item.name %>
+      </h4>
+      <small>Task creation date: <%=item.created_at.to_date%></small>
+    </div>
+<% end %>
