@@ -2,7 +2,7 @@
 <% @items.each do |item| %>
     <div class="media-body">
       <h4 class="media-heading">
-        <%= item.id %> - <%= item.name %>
+      * <%= item.name %>
       </h4>
       <small>Task creation date: <%=item.created_at.to_date%></small>
     </div>
