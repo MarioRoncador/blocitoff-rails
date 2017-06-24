@@ -3,6 +3,9 @@
     <div class="media-body">
       <h4 class="media-heading">
       * <%= item.name %>
+      <% if current_user == @user %>
+        <%= link_to 'Completed', [item.user, item], method: :delete, class: 'glyphicon glyphicon-ok' %>
+      <% end %>
       </h4>
       <small>Task creation date: <%=item.created_at.to_date%></small>
     </div>

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users do
-    resources :items, only: [:index, :show, :create]
+    resources :items
   end
 
   get 'welcome/index'

@@ -27,6 +27,15 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+    @item = current_user.items.find(params[:id])
+
+    if @item.destroy
+      flash[:notice] = "\"#{@item.name}\" was deleted successfully."
+      redirect_to root_path
+    else
+      flash.now[:alert] = "There was an error deleting the task."
+      render root_path
+    end
   end
 
   private
