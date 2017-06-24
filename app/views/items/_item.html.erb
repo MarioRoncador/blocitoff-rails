@@ -7,6 +7,7 @@
         <%= link_to 'Completed', [item.user, item], method: :delete, class: 'glyphicon glyphicon-ok' %>
       <% end %>
       </h4>
-      <small>Task creation date: <%=item.created_at.to_date%></small>
+      <small><%=distance_of_time_in_words(Time.now, item.created_at.to_date + 7)%> days left to complete this task.</small>
+      <h6>Item created: <%=item.created_at%></h6>
     </div>
 <% end %>
